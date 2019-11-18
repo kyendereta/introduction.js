@@ -19,5 +19,7 @@ console.log(c[0]);
 // 1
 
 var arr = ['rained', 'summer', 'winter'];
-var newArr = arr.push('last');
+arr.push('last');
 console.log(arr);
+
+
