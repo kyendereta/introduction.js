@@ -21,5 +21,6 @@ console.log(c[0]);
 var arr = ['rained', 'summer', 'winter'];
 arr.push('last');
 console.log(arr);
+//['rained', 'summer', 'winter', 'last']
 
 
