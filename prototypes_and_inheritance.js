@@ -43,15 +43,25 @@ console.log(video1.watch())
     }
 
     Shape.prototype.getType = function (){
-        return `this is a ${this.type}`
+        return this.type
     }
 
-    function Triangle(perimeter){
-        Shape.call(this, perimeter);
-    }
+    function Triangle(a, b, c){
+        this.type = "triangle";
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        }
     
     Triangle.prototype = Object.create(Shape.prototype);
 
-    Triangle.prototype.type = function(){
-        console.log("Hey" + Shape.prototype.call(this))
-    };
+    Triangle.prototype.getPerimeter = function(){
+        console.log(this.a + this.b + this.c);
+    }
+
+    Triangle.prototype.constructor = Triangle
+
+    newTr = new Triangle(3, 2, 1)
+    
+    newTr.getPerimeter();
+
